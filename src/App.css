@@ -1,5 +1,5 @@
 .container {
-    text-align: center;
+    
     max-width: 80%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
    margin-top: 40px;
@@ -8,4 +8,5 @@
 
 H1{
     font-size: 56px;
+    text-align: center;
 }
