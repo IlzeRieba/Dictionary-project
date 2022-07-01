@@ -8,11 +8,10 @@ function App() {
         <header className="App-header"></header>
       </div>
       <main>
-< Dictionary />
+        <h1>Dictionary</h1>
+        <Dictionary />
       </main>
-      <footer>
-        Coded by Ilze Rieba
-      </footer>
+      <footer>Coded by Ilze Rieba</footer>
     </div>
   );
 }
