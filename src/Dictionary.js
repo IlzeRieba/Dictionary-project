@@ -10,19 +10,21 @@ let [ keyWord, setKeyword] = useState("");
 let [results, setResults] = useState(null);
 
 function handleResponse(response) {
-    console.log(response.data[0]);
-    console.log(response.data[0].meanings[0].definitions[0].definition);
+
 setResults(response.data[0]);
 
 }
 
+function search() {
+  //documentation https://dictionaryapi.dev/
+  let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyWord}`;
+  axios.get(apiUrl).then(handleResponse);
+}
+
     function handleSubmit(event) {
       event.preventDefault();
-
-      //documentation https://dictionaryapi.dev/
-      let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyWord}`;
-      console.log(apiUrl);
-      axios.get(apiUrl).then(handleResponse);
+search();
+      
     }
 
     function handleKeywordChange(event) {
