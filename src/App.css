@@ -12,3 +12,12 @@ H1 {
 font-weight: 800;
 padding-top: 60px;
 }
+
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+footer {
+    padding-bottom: 30px;
+}
