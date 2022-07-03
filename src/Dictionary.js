@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
+import "./Dictionary.css";
 
 
 export default function Dictionary(props) 

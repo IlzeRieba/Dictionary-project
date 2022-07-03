@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="container">
       <div className="App">
-        <header className="App-header"></header>
       </div>
       <main>
         <h1>Dictionary</h1>
@@ -18,7 +17,7 @@ function App() {
           target="_blank"
           rel="noreferrer"
         >
-          Github{" "}
+          Github {" "}
         </a>{" "}
         and hosted on{" "}
         <a
