@@ -1,0 +1,27 @@
+.Phonetic {
+    height: 40px;
+    padding-top: 3px;
+}
+
+
+.Phonetic a {
+    border: 1px solid #ddd;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: monospace;
+    transition: all 150ms ease-in-out;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.Phonetic a:hover {
+    background-color:rgb(109, 161, 153);
+    color: white;
+
+}
+
+.Phonetic .text {
+        font-family: monospace;
+color: rgb(92, 105, 103);
+}

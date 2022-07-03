@@ -9,7 +9,7 @@ function App() {
       </div>
       <main>
         <h1>Dictionary</h1>
-        <Dictionary />
+        <Dictionary defaultKeyword="sunshine"/>
       </main>
       <footer>Coded by Ilze Rieba</footer>
     </div>

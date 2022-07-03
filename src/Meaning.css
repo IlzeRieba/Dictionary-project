@@ -1,0 +1,14 @@
+.Meaning .definition {
+font-size: 14px;
+line-height: 1.5;
+color: rgb(46, 59, 57);
+padding-top: 10px;
+}
+
+.Meaning .example {
+font-size: 11px;
+line-height: 1.5;
+color: grey;
+font-style: italic;
+padding-top: 2px;
+}

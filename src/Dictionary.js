@@ -4,10 +4,11 @@ import axios from "axios";
 import Results from "./Results";
 
 
-export default function Dictionary() 
+export default function Dictionary(props) 
 {
-let [ keyWord, setKeyword] = useState("");
+let [ keyWord, setKeyword] = useState(props.defaultKeyword);
 let [results, setResults] = useState(null);
+let [loaded, setLoaded] = useState(false);
 
 function handleResponse(response) {
 
@@ -30,16 +31,32 @@ search();
     function handleKeywordChange(event) {
 setKeyword(event.target.value);
     }
+    
+    function load() {
+        setLoaded(true);
+        search();
+    }
 
-    return (
-      <div className="Dictionary">
-        <section>
-          <form onSubmit={handleSubmit}>
-            <input type="search" onChange={handleKeywordChange} />
-            <input type="submit" />
-          </form>
-        </section>
-        <Results results={results} />
-      </div>
-    );
+if (loaded) {
+  return (
+    <div className="Dictionary">
+      <section>
+          <h3>
+           What word do you want to look up?
+          </h3>
+        <form onSubmit={handleSubmit}>
+          <input type="search" onChange={handleKeywordChange} defaultValue={props.defaultKeyword} />
+        </form>
+        <div className="hint">
+          Suggested words: flower, love, ocean, sunshine...
+        </div>
+      </section>
+
+      <Results results={results} />
+    </div>
+  );
+} else {
+    load();
+    return "loading";
+}
 }

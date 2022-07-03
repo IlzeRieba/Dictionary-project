@@ -1,7 +1,8 @@
 import React from "react";
 import Meaning from "./Meaning";
-import "./App.css";
 import Phonetic from "./Phonetic";
+import "./Results.css";
+import "./Phonetic.css";
 
 
 
@@ -11,7 +12,6 @@ if (props.results) {
       <div className="Results">
         <section>
           <h2>{props.results.word}</h2>
-
           {props.results.phonetics.map(function (phonetic, index) {
             return (
               <div key={index}>
@@ -20,15 +20,13 @@ if (props.results) {
             );
           })}
         </section>
-       <section>
-        {props.results.meanings.map(function (meaning, index) {
-          return (
-            <section key={index}>
-              <Meaning meaning={meaning} />
-            </section>
-          );
-        })}
-          </section>
+          {props.results.meanings.map(function (meaning, index) {
+            return (
+              <section key={index}>
+                <Meaning meaning={meaning} />
+              </section>
+            );
+          })}
       </div>
     );
 
